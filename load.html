@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo&amp;subset=korean" rel="stylesheet">
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="style2.css">
     <title>Loading</title>
     
 </head>
 <body onload="start()">
-    <p id="num">3</p>
+    <section>
+        <div>Searching...</div>
+        <div id="num">3</div>
+        <img id="book" src="https://2.bp.blogspot.com/-u9Ubz2rzA6Y/WNWmUynYJpI/AAAAAAAAl3s/INDVoszFhyAFbolvwh2vDzfymtGBGhB8QCLcB/s1600/reasonstovotefordemocratsbook.gif" alt="">
+    </section>
+   
+
     
     <script>
         var p=document.getElementById("num");
@@ -17,13 +23,14 @@
             id=setInterval("eachSeconds()",1000); 
         }
         function eachSeconds(){
+            p.innerHTML--;
+            
             if(p.innerHTML==0){
                 clearInterval(id);
                 window.open("http://naver.com","_self")
             }
-            else{
-                p.innerHTML--;
-            }
+            
+                
             
         }
     </script>
